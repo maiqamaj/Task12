@@ -24,12 +24,12 @@ public class FireSensor{
 		{  
 		      @Override
 		      public void run() {
-		    	
+		    	  System.out.println(Thread.currentThread().getName());
 		    synchronized(FireSensor.class) { 
 		   for(FireSensorObserver fireSensorObserver :Oserver) 
 		   {     
 			   
-		  	 System.out.println(Thread.currentThread().getName());
+		  	
 		       fireSensorObserver.fireDetected();
 		        
 		   }
